@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChannelGroups</title>
+    <style>
+        .indent20 {
+            margin-left: 40px;
+        }
+        .container {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+<script src=http://code.jquery.com/jquery-1.11.0.min.js></script>
+<script src="js/pubnub.js"></script>
+
+
+<div id="controls" class="container">
+
+    <h3 class="clear">Config (clear)</h3>
+
+    <br>
+    <input type="checkbox" id="channelEnable" name="channelEnable" checked>
+    Channel
+    <input type="text" id="channel" name="channel" value="Demo Keyset">
+    <br>  
+
+   
+
+    <h3>Pub, Sub</h3>
+
+    <div class="indent20">
+        <input id="publish" checked type="button" name="executeOperation" value="publish">
+        message<input id="message" type="text" size=15 name="subKey" value="my message is important">
+         <br>
+        <input id="subscribe" type="button" name="executeOperation" value="subscribe">
+        <input id="unsubscribe" type="button" name="executeOperation" value="unsubscribe">
+
+    </div>
+
+   
+    <h3 class="clear">App Settings</h3>
+
+    origin<input id="origin" type="text" size=15 name="subKey" value="pubsub.pubnub.com">
+    sub<input id="sub_key" type="text" size=15 name="subKey" value="sub-c-302d9976-fc3a-11e6-ba92-02ee2ddab7fe">
+    pub<input id="pub_key" type="text" size=15 name="pubKey" value="pub-c-e3b6d04d-0ae2-45a5-a117-101adfa570ac">
+  
+</div>
+
+<div class="container" id="errorOutputDiv">
+    <textarea id="output" rows=47 cols="85"></textarea>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
